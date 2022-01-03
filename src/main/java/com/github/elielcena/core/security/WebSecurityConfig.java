@@ -60,7 +60,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers(Constants.API_V1.concat("/auth/**"), "/hostCheck", "/h2-console/**").permitAll()
+                .authorizeRequests()
+                .antMatchers(Constants.API_V1.concat("/auth/**"), "/hostCheck", "/h2-console/**", "/actuator/**", "/v3/api-docs/**", "/swagger-ui/**",
+                        "/swagger-ui.html")
+                .permitAll()
                 .anyRequest().authenticated();
 
         http.headers().frameOptions().disable();

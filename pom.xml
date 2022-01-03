@@ -14,7 +14,9 @@
 	<properties>
 		<java.version>11</java.version>
 
+		<jjwt.version>0.9.1</jjwt.version>
 		<modelmapper.version>2.4.5</modelmapper.version>
+		<springdoc.version>1.6.3</springdoc.version>
 	</properties>
 
 	<parent>
@@ -65,7 +67,7 @@
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt</artifactId>
-			<version>0.9.1</version>
+			<version>${jjwt.version}</version>
 		</dependency>
 
 		<dependency>
@@ -77,6 +79,12 @@
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>
 			<version>${modelmapper.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc.version}</version>
 		</dependency>
 
 		<dependency>
