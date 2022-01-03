@@ -9,7 +9,7 @@
 	<version>1.0.0</version>
 
 	<name>simple-jwt-authentication</name>
-	<description>STIWEB Clinic</description>
+	<description>simple-jwt-authentication</description>
 
 	<properties>
 		<java.version>11</java.version>
