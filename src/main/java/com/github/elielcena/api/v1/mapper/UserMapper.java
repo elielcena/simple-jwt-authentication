@@ -23,7 +23,11 @@ public class UserMapper {
     private ModelMapper modelMapper;
 
     public UserResponse toModel(User entity) {
-        return modelMapper.map(entity, UserResponse.class);
+        var roles = entity.getRoles().stream().map(role -> role.getName().toString()).collect(Collectors.toList());
+        var mapped = modelMapper.map(entity, UserResponse.class);
+        mapped.setRoles(roles);
+
+        return mapped;
     }
 
     public List<UserResponse> toCollectionModel(List<User> entities) {
