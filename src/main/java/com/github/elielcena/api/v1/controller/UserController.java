@@ -53,7 +53,7 @@ public class UserController {
         return mapper.toModel(userService.save(user));
     }
 
-    @PutMapping("/{id}/alterar-senha")
+    @PutMapping("/{id}/change-password")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void changePassword(@PathVariable Long id, @RequestBody @Valid ChangePasswordRequest request) {
         userService.changePassword(id, request.getCurrentPassowrd(), request.getNewPassword(),
