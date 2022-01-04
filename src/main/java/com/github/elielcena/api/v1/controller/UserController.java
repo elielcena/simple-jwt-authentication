@@ -60,18 +60,4 @@ public class UserController {
                 request.getConfirmNewPassword());
     }
 
-    // @CheckSecurity.Users.Edit
-    // @PutMapping("/{id}/ativar")
-    // @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    // public void ativar(@PathVariable Long id) {
-    // userService.ativar(id);
-    // }
-    //
-    // @CheckSecurity.Users.Edit
-    // @DeleteMapping("/{id}/desativar")
-    // @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    // public void desativar(@PathVariable Long id) {
-    // userService.desativar(id);
-    // }
-
 }
